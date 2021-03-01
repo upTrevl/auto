@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActiveRoute">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ProgressBar
+            android:id="@+id/routeProgress"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:rotation="90"
+            android:scaleX="15"
+            android:scaleY="1.5"
+            app:trackCornerRadius="5dp"
+            app:trackThickness="5dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_stations"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rv_route_list_bg" />
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
